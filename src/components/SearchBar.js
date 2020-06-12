@@ -9,8 +9,12 @@ class SearchBar extends React.Component{
       //  Empty string in this case.
     
     handleChange = (event) => {
-        console.log(event.target.value);
-        // this.setState({ searchTerm: })
+        // console.log(event.target.value);
+        this.setState({ searchTerm: event.target.values })
+    }
+
+    handleSubmit = () => {
+        const { searchTerm, value, value1, } = this.state;
     }
       
     render(){

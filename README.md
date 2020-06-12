@@ -144,6 +144,10 @@ class SearchBar extends React.Component{
 
 export default SearchBar;
 ```
+3. Run 'npm start' to test.
+4. See screenshot.
+![image](https://user-images.githubusercontent.com/42177018/84520829-b7021f00-ad06-11ea-8e32-766b5e629ab5.png)
+
 
 
 ## Available Scripts
