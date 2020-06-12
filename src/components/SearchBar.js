@@ -10,11 +10,15 @@ class SearchBar extends React.Component{
     
     handleChange = (event) => {
         // console.log(event.target.value);
-        this.setState({ searchTerm: event.target.values })
+
+        //This function will update our 'searchTerm' in this state above.
+        this.setState({ searchTerm: event.target.value })        
     }
 
     handleSubmit = () => {
-        const { searchTerm, value, value1, } = this.state;
+        //This line here takes in the 'searchTerm' from this 'this.state'.
+        const { searchTerm } = this.state;
+        
     }
       
     render(){

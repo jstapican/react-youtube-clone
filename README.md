@@ -111,7 +111,7 @@ import {SearchBar, VideoDetail} from './components';
 ```
 
 
-## Part 6: Updating SearchBar.js
+## Part 6: Adding a Search Bar is SearchBar.js
 1. Update the ff import code in 'SearchBar.js':
 ```
 import React from 'react';
@@ -147,7 +147,8 @@ export default SearchBar;
 3. Run 'npm start' to test.
 4. See screenshot.
 ![image](https://user-images.githubusercontent.com/42177018/84520829-b7021f00-ad06-11ea-8e32-766b5e629ab5.png)
-
+5. Type any word in the search bar and check it if it runs in the console.
+6. Create functions 'handleChange' and 'handleSubmit'.
 
 
 ## Available Scripts
