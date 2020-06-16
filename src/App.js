@@ -7,14 +7,33 @@ import {SearchBar, VideoDetail} from './components';
 // import VideoDetail from './components/VideoDetail';
 
 class App extends React.Component {
+
+    // We used 'async' since we are fetching data from Youtube API.
+    // Asynchronity are used for fetching real data.
+    // Basically it stops code execution until the data is fetched.
+    handleSubmit = async (searchTerm) => {
+        const response = await youtube.get('search', { 
+            params: {
+                part: 'snippet', // For cleaner syntax.
+                maxResults: 5, // Fetch 5 Youtube videos.
+                key: 'AIzaSyBpozuKFvYCeOy8sleZOb9xpiuWnAhHcMs', // Youtube API key.
+                q: searchTerm,
+            }
+        });
+
+        
+        //console.log(response.data.items);
+        console.log(response);
+    }
+
     render () {
         return (
             // <h1>React Youtube Clone App</h1>
-            <Grid justify="center" container spacing={16}>
+            <Grid justify="center" container spacing={10}>
                 <Grid item xs={12}>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={10}>
                         <Grid item xs={12}>
-                            <SearchBar />
+                            <SearchBar onFormSubmit = {this.handleSubmit} />
                         </Grid>
                         <Grid item xs={8}>
                             <VideoDetail />
